@@ -27,15 +27,19 @@ Student
             inverseJoinColumns = @JoinColumn(name = "subject_id"))
     private List<Subject> subjects;
 ```
+
    2.StudentRepository
+   
    ```java
    public interface StudentRepository extends JpaRepository<Student, Long> {
     boolean existsById(Long id);
 
 }
    ```
+   
    3. Student Controller
       ```java
+      
    private final StudentRepository studentRepository;
     private final SubjectRepository subjectRepository;
 
@@ -49,6 +53,7 @@ Student
         return studentRepository.save(student);
     }
    ```
+   
   3.1 Student add subject
    ```java
   @PostMapping("/add/subject/{studentId}/{subjectId}")
