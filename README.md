@@ -38,10 +38,9 @@ Student
    ```
    
    3. Student Controller
-      ```java
-      
-   private final StudentRepository studentRepository;
-    private final SubjectRepository subjectRepository;
+   ```java
+     private final StudentRepository studentRepository;
+     private final SubjectRepository subjectRepository;
 
     public StudentController(StudentRepository studentRepository, SubjectRepository subjectRepository) {
         this.studentRepository = studentRepository;
